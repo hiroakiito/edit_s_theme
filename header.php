@@ -21,7 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+<?php wp_body_open(); ?><!-- bodyタグの直後に何かを挿入したい場合bodyタグ直下に設置して用いる（scriptタグなど）。wp_head等と同じ -->
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'sample-theme' ); ?></a>
 

@@ -12,7 +12,7 @@
  * @package _sTheme
  */
 
-get_header();
+get_header();// テーマでのheader.phpの読みこみ
 ?>
 
 	<main id="primary" class="site-main">

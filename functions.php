@@ -7,41 +7,39 @@
  * @package _sTheme
  */
 
+//  リリースする際にテーマのバージョン番号を更新する
 if ( ! defined( '_S_VERSION' ) ) {
-	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
 }
 
 if ( ! function_exists( 'sample_theme_setup' ) ) :
 	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
+	 *  テーマのデフォルト設定を行う
+	 * この関数はafter_set_up_themeによってフックされる
+	 * 初期化フックの前に実行される。
 	 */
 	function sample_theme_setup() {
 		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on _sTheme, use a find and replace
-		 * to change 'sample-theme' to the name of your theme in all the template files.
+		 * テーマを翻訳できるようにする。
+		 * 翻訳は/ languages /ディレクトリに保存でされる。
+		 * _sThemeに基づいてテーマを構築している場合は、検索と置換を使用します
+		 * 「sample-theme」をすべてのテンプレートファイルのテーマの名前に変更します。
 		 */
 		load_theme_textdomain( 'sample-theme', get_template_directory() . '/languages' );
 
-		// Add default posts and comments RSS feed links to head.
+		// デフォルトの投稿とコメントのRSSフィードリンクをヘッド情報に追加します。
 		add_theme_support( 'automatic-feed-links' );
 
 		/*
-		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
+		* WordPressにドキュメントのタイトルを管理させます。
+		*テーマのサポートを追加することにより、このテーマは使用しないことを宣言します
+		*ドキュメントヘッドにハードコードされた<title>タグ。WordPressが
+		*提供してください。
 		 */
 		add_theme_support( 'title-tag' );
 
 		/*
-		 * Enable support for Post Thumbnails on posts and pages.
+		 * 投稿とページの投稿サムネイルのサポートを有効にします。
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
@@ -144,6 +142,7 @@ add_action( 'widgets_init', 'sample_theme_widgets_init' );
  */
 function sample_theme_scripts() {
 	wp_enqueue_style( 'sample-theme-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'app', get_template_directory_uri() . '/css/app.css', array(), _S_VERSION );
 	wp_style_add_data( 'sample-theme-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'sample-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );

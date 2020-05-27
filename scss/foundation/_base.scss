@@ -1,1 +1,15 @@
-// テスト
+// flex
+@mixin flex($justify:space-between,$align-items: stretch) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justify;
+  align-items: $align-items;
+}
+
+// 横幅管理 wrapper
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1000px;
+}

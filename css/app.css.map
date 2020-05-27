@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "ASSA,AAAA,UAAU,CAAC;EACT,MAAM,EAAE,MAAM;EACd,OAAO,EAAE,MAAM;EACf,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,MAAM;CAClB",
     "sources": [
         "../scss/app.scss",
         "../scss/foundation/_reset.scss",

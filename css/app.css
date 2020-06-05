@@ -1,7 +1,142 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+body, html,
+div, p, span, blockquote, u, s, i, b,
+table, tr, th, td,
+ul, ol, dl, li, dt, dd,
+strong, h1, h2, h3, h4, h5,
+header, footer, nav, aside, section,
+input, select, option, textarea {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  color: inherit;
+}
+
+body {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  line-height: 1.6;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: middle;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+table {
+  border-collapse: collapse;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
   max-width: 1000px;
+}
+
+.site-header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.site-header .site-branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.site-header .site-branding .head-left {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.site-header .site-branding .head-right {
+  width: 50%;
+}
+
+.main-navigation {
+  border-top: 1px #efefef solid;
+  border-bottom: 1px #efefef solid;
+}
+
+.main-navigation .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-navigation .nav-menu .menu-item {
+  width: 19%;
+  text-align: center;
+  border-right: 1px #efefef solid;
+}
+
+.main-navigation .nav-menu .menu-item:first-child {
+  border-left: 1px #efefef solid;
+}
+
+.main-navigation .nav-menu .menu-item:hover {
+  border-bottom: 3px solid #231B8F;
 }
 /*# sourceMappingURL=app.css.map */

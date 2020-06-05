@@ -1,0 +1,35 @@
+.site-header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  .site-branding {
+    @include flex();
+    .head-left {
+      width: 50%;
+      @include flex();
+    }
+    .head-right {
+      width: 50%;
+    }
+  }
+}
+
+.main-navigation {
+  border-top: 1px #efefef solid;
+  border-bottom: 1px #efefef solid;
+  .nav-menu {
+    @include flex();
+    margin: 0 auto;
+    padding: 0 20px;
+    .menu-item {
+      width: 19%;
+      text-align: center;
+      border-right: 1px #efefef solid;
+      &:first-child {
+        border-left: 1px #efefef solid;
+      }
+      &:hover {
+        border-bottom: 3px solid #231B8F;
+      }
+    }
+  }
+}

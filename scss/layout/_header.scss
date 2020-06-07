@@ -25,6 +25,9 @@
       width: 19%;
       text-align: center;
       border-right: 1px #efefef solid;
+      @include mq() {
+        width: 100%;
+      }
       &:first-child {
         border-left: 1px #efefef solid;
       }

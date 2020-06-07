@@ -82,6 +82,15 @@ table {
           align-items: stretch;
 }
 
+.site-footer {
+  background-color: #444;
+  color: #ffffff;
+}
+
+.site-footer .copy {
+  text-align: center;
+}
+
 .site-header {
   padding-top: 15px;
   background-color: #ffffff;
@@ -148,6 +157,12 @@ table {
   border-right: 1px #efefef solid;
 }
 
+@media screen and (max-width: 414px) {
+  .main-navigation .nav-menu .menu-item {
+    width: 100%;
+  }
+}
+
 .main-navigation .nav-menu .menu-item:first-child {
   border-left: 1px #efefef solid;
 }
@@ -175,8 +190,20 @@ table {
   background-color: #ffffff;
 }
 
+@media screen and (max-width: 414px) {
+  .main-container .site-main {
+    width: 100%;
+  }
+}
+
 .main-container .aside {
   width: 28%;
+}
+
+@media screen and (max-width: 414px) {
+  .main-container .aside {
+    width: 100%;
+  }
 }
 
 .comments-area {

@@ -17,16 +17,17 @@
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
-
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+			<!-- <div class="entry-meta"> -->
 				<?php
-				sample_theme_posted_on();
-				sample_theme_posted_by();
+				//sample_theme_posted_on();
+				//sample_theme_posted_by();
 				?>
-			</div><!-- .entry-meta -->
+			<!-- </div>.entry-meta -->
 		<?php endif; ?>
+		<p><?php echo get_the_date( 'Y.m.d' ); ?></p>
+		<?php sample_theme_entry_footer(); ?>
 	</header><!-- .entry-header -->
 
 	<?php sample_theme_post_thumbnail(); ?>

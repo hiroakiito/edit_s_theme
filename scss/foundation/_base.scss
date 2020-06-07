@@ -1,3 +1,21 @@
+// レスポンシブ
+$sp: 'max-width: 768px';
+// コンテンツの最大幅
+$max-width: 1200px;
+
+$breakpoints: (
+  'sm': 'screen and (max-width: 414px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: sm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+}
+
 // flex
 @mixin flex($justify:space-between,$align-items: stretch) {
   display: flex;
@@ -12,4 +30,9 @@
   padding: 0 20px;
   width: 100%;
   max-width: 1000px;
+}
+
+// パンくずリストのレイアウト
+.bread-container {
+  @include flex(flex-start);
 }

@@ -9,9 +9,9 @@
 
 get_header();
 ?>
-
+<div class="container main-container">
+<?php breadcrumb(); ?>
 	<main id="primary" class="site-main">
-
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -36,5 +36,7 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+get_sidebar();?>
+</div>
+<?php
 get_footer();

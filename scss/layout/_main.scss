@@ -1,0 +1,10 @@
+.main-container {
+  @include flex();
+  .site-main {
+    width: 70%;
+    background-color: #ffffff;
+  }
+  .aside {
+    width: 28%;
+  }
+}

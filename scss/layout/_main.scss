@@ -3,6 +3,7 @@
   .site-main {
     width: 70%;
     background-color: #ffffff;
+    word-wrap: break-word;
     @include mq() {
       width: 100%;
     }

@@ -30,11 +30,6 @@ if ( post_password_required() ) {
 			<?php
 			$sample_theme_comment_count = get_comments_number();
 			if ( '1' === $sample_theme_comment_count ) {
-				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'sample-theme' ),
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
-				);
 			} else {
 				printf( 
 					/* translators: 1: comment count number, 2: title. */
@@ -48,16 +43,20 @@ if ( post_password_required() ) {
 
 		<?php the_comments_navigation(); ?>
 
-		<ol class="comment-list">
-			<?php
-			wp_list_comments(
-				array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				)
-			);
-			?>
-		</ol><!-- .comment-list -->
+		<div class="comment-fukidashi">
+			<ol class="comment-list">
+				<?php
+				wp_list_comments(
+					array(
+						'style'      => 'ol',
+						'short_ping' => true,
+						'avatar_size' => 100,
+						'callback' => 'comment_callback'
+					)
+				);
+				?>
+			</ol><!-- .comment-list -->
+		</div>
 
 		<?php
 		the_comments_navigation();

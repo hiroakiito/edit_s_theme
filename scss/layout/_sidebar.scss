@@ -1,0 +1,38 @@
+.side-title {
+  position: relative;
+  overflow: hidden;
+  padding: .3em;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+  }
+  &:before{
+    border-bottom: 1px solid #231B8F;
+    width: 100%;
+  }
+  &:after{
+    border-bottom: 1px solid #efefef;
+    width: 100%;
+  }
+}
+.recently-post {
+  @include flex(flex-start);
+  margin-top: 20px;
+  position: relative;
+  .thumbnail {
+    height: 100px;
+    width: 100px;
+    margin-right: 20px;
+    border: 1px solid #efefef;
+  }
+  .recently-date {
+    position: absolute;
+    bottom: 0;
+  }
+  .title {
+    width: 200px;
+    word-wrap: break-word;
+  }
+}

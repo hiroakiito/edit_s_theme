@@ -199,6 +199,32 @@ function breadcrumb() {
 	echo "</ul>";
 }
 
+// コメントスタイルの編集用
+function comment_callback($comment, $args, $depth) {
+  $GLOBALS['comment'] = $comment; ?>
+   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+     <div id="comment-<?php comment_ID(); ?>">
+      <div class="comment-author vcard">
+         <?php echo get_avatar($comment,$size='48',$default='<path_to_url>' ); ?>
+			<div class="comment-right">
+         <?php printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()) ?>
+ 
+      <div class="comment-meta commentmetadata">
+				<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
+					<?php printf(__('%1$s'), get_comment_date('Y.m.d')) ?>
+				</a><?php edit_comment_link(__('(Edit)'),'  ','') ?>
+			</div>
+ 
+      <?php comment_text() ?>
+			</div>
+			</div>
+      <div class="reply">
+         <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+      </div>
+     </div>
+<?php
+        }
+
 /**
  * Implement the Custom Header feature.
  */
@@ -225,4 +251,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

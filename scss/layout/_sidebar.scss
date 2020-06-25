@@ -1,3 +1,30 @@
+// 検索フォーム
+.searchform-container {
+  @include flex(flex-start);
+  border: 1px solid #efefef;
+  .s {
+    border: 0px none;
+    height: 28px;
+    width: 90%;
+    -webkit-appearance: none;
+  }
+  .searchsubmit {
+    width: 10%;
+    height: 30px;
+    padding: 0;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    background-color: #fff;
+    background: transparent;
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+}
+
+
+
 .side-title {
   position: relative;
   overflow: hidden;

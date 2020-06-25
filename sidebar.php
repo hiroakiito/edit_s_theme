@@ -13,6 +13,9 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <aside id="secondary" class="widget-area aside">
+<?php
+    get_search_form();
+?>
 <h1 class="side-title">最近の投稿</h1>
 
 <!-- アイキャッチつき -->

@@ -207,6 +207,42 @@ table {
   }
 }
 
+.searchform-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  border: 1px solid #efefef;
+}
+
+.searchform-container .s {
+  border: 0px none;
+  height: 28px;
+  width: 90%;
+  -webkit-appearance: none;
+}
+
+.searchform-container .searchsubmit {
+  width: 10%;
+  height: 30px;
+  padding: 0;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  background-color: #fff;
+  background: transparent;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
 .side-title {
   position: relative;
   overflow: hidden;
